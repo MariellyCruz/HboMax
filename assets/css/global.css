@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Buttons */
+
+button {
+    font-family: "Raleway", sans-serif;
+    padding: 16px 40px;
+    border-radius: 500px;
+    font-weight: 700;
+    background-color: --btn-link-bg-color;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    padding: 16px 40px;
+    border-radius: 500px;
+    font-weight: 700;
+    background-color: --btn-link-bg-color;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu_subscribe {
+    background-color: var(--tertiary-color);
+    padding: 10px 20px;
+    border-radius: 500px;
+}
+
+.menu_subscribe:hover {
+    background-color: white;
+    color: var(--btn-link-color);
+    transition: 1s;
+}
+
+.subscription_button {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.header_button {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+    animation: wiggle 2.2s linear infinite;
+}
+
+.header_button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.subscription_button:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.footer_button {
+    font-family: "Raleway", sans-serif;
+    margin: 0 14px;
+    font-weight: 700;
+    background-color: none;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer_button:hover {
+    color: var(--text-color);
+}
+
+
+/* Animations */
+ 
+@keyframes wiggle {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(-25deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    35% {
+        transform: rotate(-10deg);
+    }
+
+    40%,
+    100% {
+        transform: rotate(0)
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
